@@ -1,0 +1,16 @@
+body {
+    margin-bottom: 80px;
+}
+
+.page-header {
+    margin-top: 0!important;
+    padding-bottom: 0!important;
+}
+.panel-body {
+    padding-top: 0!important;
+}﻿
+
+.deaturedImg {
+     margin-bottom: 15px;
+     width: 100%;
+ }

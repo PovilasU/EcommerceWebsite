@@ -1,0 +1,148 @@
+<?php
+session_start();
+require 'connect.php';
+require 'current_user.php';
+
+if(isset($_POST['submit'])){
+//if($_POST['submit']){
+    $ScName=strip_tags($_POST['ScName']);
+    $fname=strip_tags($_POST['fname']);
+    $lname=strip_tags($_POST['lname']);
+    $email=strip_tags($_POST['email']);
+    $password=strip_tags($_POST['password']);
+    $password2=strip_tags($_POST['password2']);
+
+    $error = array();
+
+    if(empty($email) or !filter_var($email,FILTER_SANITIZE_EMAIL))
+    {
+        $error[] = "Email id is empty or invalid";
+    }
+    if(empty($password)){
+        $error[] = "Please enter password";
+    }
+    if(empty($password2)){
+        $error[] = "Please enter Confirm password";
+    }
+    if($password != $password2){
+        $error[] = "Password and Confirm password are not matching";
+    }
+    if(empty($fname)){
+        $error[] = "Enter first name";
+    }
+    if(empty($lname)){
+        $error[] = "Enter last name";
+    }
+
+    if (count($error) == 0){
+        //database configuration
+        $host = 'localhost';
+        $database_name = 'shopping_website';
+        $database_user_name = '';
+        $database_password = '';
+        $collection_name ='users';
+
+        $connection=new MongoClient();
+        echo "Connection to database successfully" . "<br>";
+        echo "<br>";
+
+        if($connection){
+
+            //connecting to database
+            $database=$connection->$database_name;
+
+            //connect to specific collection
+            $collection=$database->$collection_name;
+
+
+            $query=array('email'=>$email);
+            //checking for existing user
+            $count=$collection->findOne($query);
+
+            if(!count($count)){
+                //Save the New user
+                $user=array('fname'=>$fname,'lname'=>$lname,'ScName'=>$ScName,'email'=>$email,'password'=>md5($password),'password'=>$password2);
+                $collection->save($user);
+                echo "You are successfully registered.";
+            }else{
+                echo "Email is already existed.Please register with another Email id!.";
+            }
+
+        }else{
+
+            die("Database are not connected");
+        }
+
+    }else{
+        //Displaying the error
+        foreach($error as $err){
+            echo $err.'</br>';
+        }
+    }
+}
+
+?>
+
+<html>
+<head>
+    <title>
+        Registration
+    </title>
+</head>
+<body>
+<!-- Navigation section -->
+<div class="navigation">
+    <a class="selected" href="index.php">Home</a>
+    <a href="shop.php">Shop</a>
+    <a href="cart.php">Cart</a>
+    <a href="registration.php">Registration</a>
+    <a href="login.php">Login</a>
+    <a href="logout.php?action=logout">Logout</a>
+</div>
+
+
+
+<form action="registration.php" method="POST">
+    <table cellpadding="2" cellspacing="2" border="0">
+        <tr>
+            <td>Screen Name:</td>
+            <td><input type="text" id="ScName" name="ScName"></td>
+        </tr>
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text" id="fname" name="fname" ></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text" id="lname" name="lname"  ></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" id="email" name="email" ></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" id="password" name="password" ></td>
+        </tr>
+        <tr>
+            <td> Confirm Password:</td>
+            <td><input type="password" id="password2" name="password2" ></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input  name="submit" id="submit" type="submit" value="register" ></td>
+        </tr>
+
+
+
+
+    </table>
+</form>
+
+<?php
+//print_r($_SESSION);
+?>
+
+</body>
+</html>
+
