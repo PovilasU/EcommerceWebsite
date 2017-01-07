@@ -16,18 +16,22 @@ function outputHeader($title){
     echo '<!-- Link to external style sheet -->';
     echo '<link  href="css/bootstrap.min.css" rel="stylesheet">';
     echo '<link  href="css/styles.css" rel="stylesheet">';
+    echo '<link  href="css/styles-override.css" rel="stylesheet">';
+//    echo '<link  href="css/stylesextra2.css" rel="stylesheet">';
     echo '</head>';
     echo '<body>';
 
 }
 
+
 /* Ouputs the banner and the navigation bar
     The selected class is applied to the page that matches the page name variable */
 function outputBannerNavigation($pageName)
 {
-    echo '<div class="navbar navbar-inverse navbar-static-top">';
+//    echo '<div class="navbar navbar-inverse navbar-static-top">';
+    echo '<div class="navbar navbar-default navbar-custom navbar-static-top  ">';
     echo '<div class="container">';
-    echo '<a href="#" class="navbar-brand">E-Commerce Website</a><!--End of  <a> navbar-brand-->';
+    echo '<a href="#" class="navbar-brand  ">E-Commerce Website</a><!--End of  <a> navbar-brand-->';
     echo '<button class="navbar-toggle" data-toggle="collapse" data-target = ".navHeaderCollapse">';
     echo '<span class="icon-bar"></span>';
     echo '<span class="icon-bar"></span>';
@@ -35,7 +39,7 @@ function outputBannerNavigation($pageName)
     echo '</button><!--End of button-->';
     echo '<div class="collapse navbar-collapse navHeaderCollapse">';
     echo '<ul class="nav navbar-nav navbar-right">';
-    echo '<li class="active"><a href="#">Home</a></li>';
+    echo '<li class=""><a href="index.php">Home</a></li>';
     echo '<li><a href="shop.php">Shop</a></li>';
     echo '<li><a href="cart.php">Cart</a></li>';
     echo '<li><a href="registration.php">Registration</a></li>';
@@ -43,12 +47,25 @@ function outputBannerNavigation($pageName)
     echo '<li><a href="purchase-history.php">Purchase history</a></li>';
     echo '<li><a href="login.php">Login</a></li>';
     echo '<li><a href="logout.php">Logout</a></li>';
-    echo '<li><a href="#">About</a></li>';
+    echo '<li><a href="about.php">About</a></li>';
+    echo '<li><a href="templatePage.php">Template Page</a></li>';
     echo '</ul><!--End of class="nav navbar-nav navbar-right"-->';
     echo '</div><!--End of collapse navbar-collapse navHeaderCollapse-->';
     echo '</div><!--End of container-->';
     echo '</div><!--End of navbar-->';
 }
+
+function outputMainBanner(){  
+    echo ' <!--Banner-->';
+    echo '<div class="container-fluid no-padding">';
+    echo '<div class="row">';
+    echo '<div class="col-md-12">';
+    echo ' <img src="images/bnr-1.jpg" alt="" class="img-responsive" width="100%"/>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '<!--End Banner-->';
+ }
 
 function outputMainPanel()
 {

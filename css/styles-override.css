@@ -1,0 +1,74 @@
+/*--starts-logo--*/
+.logo {
+    text-align: center;
+    padding: 25px 0 20px 0px;
+    border-bottom: 1px solid #DEDEDE;
+}
+.logo a h1 {
+    font-size: 32px;
+    color: #000000;
+    margin: 0;
+    font-family: 'Lora-Regular';
+    text-transform: uppercase;
+    display: inline-block;
+}
+.logo a:hover{
+    text-decoration:none;
+}
+/*--end-logo--*/
+
+/*--starts-menu-bar--*/
+.navbar {
+    margin-bottom: 0; /*working */
+    color: red;
+}
+
+.navbar-custom {
+
+    color: red;
+    background-color: white;
+}
+.color-me{
+    color:#000000!important;
+}
+/*--end-menu-bar--*/
+
+.no-padding{
+    padding-left:0;
+    padding-right:0;
+}
+
+/*--starts-top-header--*/
+.top-header {
+    background: #000;
+    padding: 10px 0px;
+}
+.top-header-left{
+    width:50%;
+    float:left;
+}
+
+
+.total {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.cart box_1 a:hover{
+    text-decoration:none;
+}
+
+.box_1 a img {
+    margin: 3px 0 0 10px;
+}
+/*----*/
+.box {
+    float: left;
+    width: 11%;
+    margin-right: 10%;
+}
+.box1{
+    float:left;
+    width:20.5%;
+}

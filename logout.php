@@ -19,5 +19,7 @@ session_destroy();
 <?php
 //echo '<br><a href="login.php?action=logout">Logout</a> ';
 echo "See you later!";
+header("Location: index.php");
+
 
  ?>
