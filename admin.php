@@ -44,6 +44,7 @@ outputMainPanel();
             $price=strip_tags($_POST['price']);
             $quantity=strip_tags($_POST['quantity']);
             $description=strip_tags($_POST['description']);
+            $image=strip_tags($_POST['image']);
             $error = array();
 
             if(empty($itemName))
@@ -59,6 +60,9 @@ outputMainPanel();
             }
             if(empty($description)){
                 $error[] = "Enter description";
+            }
+            if(empty($image)){
+                $error[] = "Enter image name";
             }
 
             if (count($error) == 0){
@@ -88,7 +92,7 @@ outputMainPanel();
 
                     if(!count($count)){
                         //Save the New user
-                        $item=array('name'=>$itemName,'price'=>$price,'quantity'=>$quantity,'description'=>$description);
+                        $item=array('name'=>$itemName,'price'=>$price,'quantity'=>$quantity,'description'=>$description, 'image'=>$image);
                         $collection->save($item);
                         echo "Item added successfully.";
                     }else{
@@ -116,6 +120,7 @@ outputMainPanel();
             $price=strip_tags($_POST['price']);
             $quantity=strip_tags($_POST['quantity']);
             $description=strip_tags($_POST['description']);
+            $image=strip_tags($_POST['image']);
             $error = array();
 
             if(empty($itemName))
@@ -131,6 +136,9 @@ outputMainPanel();
             }
             if(empty($description)){
                 $error[] = "Enter description";
+            }
+            if(empty($image)){
+                $error[] = "Enter image name";
             }
 
             if (count($error) == 0){
@@ -164,7 +172,7 @@ outputMainPanel();
 
                     }else{
                         echo "Item is found.";
-                        $item=array('name'=>$itemName,'price'=>$price,'quantity'=>$quantity,'description'=>$description);
+                        $item=array('name'=>$itemName,'price'=>$price,'quantity'=>$quantity,'description'=>$description, 'image'=>$image);
                         $collection->update(
                             array('name'=>$itemName),$item);
                         echo "Item modified successfully.";
@@ -197,6 +205,7 @@ outputMainPanel();
                 <th>Price £</th>
                 <th>Quantity</th>
                 <th>Description</th>
+                <th>Image</th>
                 <!--        <th>Description</th>-->
                 <!--        <th>Buy</th>-->
             </tr>
@@ -209,6 +218,8 @@ outputMainPanel();
                     <td><?php echo $product["price"] ; ?></td>
                     <td><?php echo $product["quantity"] ; ?></td>
                     <td><?php echo $product["description"] ; ?></td>
+                    <td><?php echo $product["image"] ; ?></td>
+<!--                    <td>--><?php //echo $product["image"] ; ?><!--</td>-->
                     <!--            <td>--><?php //echo $product["quantity"] ; ?><!--</td>-->
                     <!--            <td>--><?php //echo $product["description"] ; ?><!--</td>-->
                     <!--            <td><a href="cart.php?_id=--><?php //echo $product["_id"]; ?><!--">Order Now</a> </td>-->
@@ -231,6 +242,8 @@ outputMainPanel();
             <input type="text" id="quantity" name="quantity"  /></br></br>
             Description:
             <input type="text" id="description" name="description"  /></br></br>
+            Image name:
+            <input type="text" id="image" name="image"  /></br></br>
             <input  name="submit" id="submit" type="submit" value="Add Item" />
             <input  name="modify" id="submit" type="submit" value="Modify Item" />
         </form>

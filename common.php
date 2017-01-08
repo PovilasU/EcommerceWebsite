@@ -16,11 +16,35 @@ function outputHeader($title){
     echo '<!-- Link to external style sheet -->';
     echo '<link  href="css/bootstrap.min.css" rel="stylesheet">';
     echo '<link  href="css/styles.css" rel="stylesheet">';
-    echo '<link  href="css/styles-override.css" rel="stylesheet">';
-//    echo '<link  href="css/stylesextra2.css" rel="stylesheet">';
+    echo '<link  href="css/styles-overrided.css" rel="stylesheet">';
     echo '</head>';
     echo '<body>';
 
+}
+function outputTopHeader(){
+    echo ' <!--top-header-->';
+    echo '<div class="top-header">';
+    echo '<div class="container">';
+    echo '<div class="container">';
+    echo '<div class="top-header-main">';
+    echo '<div class="col-md-6 top-header-left">';
+    echo '<div style="float: right" class="cart box_1">';
+    echo '<a href="checkout.html">';
+    echo '<div class="total">';
+    echo '<span class="simpleCart_total"></span></div>';
+    echo '<span class="simpleCart_total"> </span></div>';
+    echo '<img src="images/cart-1.png" alt="" />';
+    echo '</a>';
+    echo '<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>';
+    echo '</div>';
+    echo '<div style="float: right" class="cart box_1">';
+    echo '<p style="color: white"><?php echo "Current User: ".$name; ?></p>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '<!--End top-header-->';
 }
 
 
@@ -30,7 +54,7 @@ function outputBannerNavigation($pageName)
 {
 //    echo '<div class="navbar navbar-inverse navbar-static-top">';
     echo '<div class="navbar navbar-default navbar-custom navbar-static-top  ">';
-    echo '<div class="container">';
+    echo '<div  class="container">';
     echo '<a href="#" class="navbar-brand  ">E-Commerce Website</a><!--End of  <a> navbar-brand-->';
     echo '<button class="navbar-toggle" data-toggle="collapse" data-target = ".navHeaderCollapse">';
     echo '<span class="icon-bar"></span>';
@@ -42,10 +66,10 @@ function outputBannerNavigation($pageName)
     echo '<li class=""><a href="index.php">Home</a></li>';
     echo '<li><a href="shop.php">Shop</a></li>';
     echo '<li><a href="cart.php">Cart</a></li>';
-    echo '<li><a href="registration.php">Registration</a></li>';
+  //  echo '<li><a href="registration.php">Registration</a></li>';
     echo '<li><a href="admin.php">Admin</a></li>';
-    echo '<li><a href="purchase-history.php">Purchase history</a></li>';
-    echo '<li><a href="login.php">Login</a></li>';
+//    echo '<li><a href="purchase-history.php">Purchase history</a></li>';
+  //  echo '<li><a href="login.php">Login</a></li>';
     echo '<li><a href="logout.php">Logout</a></li>';
     echo '<li><a href="about.php">About</a></li>';
     echo '<li><a href="templatePage.php">Template Page</a></li>';
@@ -57,7 +81,7 @@ function outputBannerNavigation($pageName)
 
 function outputMainBanner(){  
     echo ' <!--Banner-->';
-    echo '<div class="container-fluid no-padding">';
+    echo '<div style="margin-top: 0px" class="container-fluid no-padding">';
     echo '<div class="row">';
     echo '<div class="col-md-12">';
     echo ' <img src="images/bnr-1.jpg" alt="" class="img-responsive" width="100%"/>';
@@ -69,36 +93,9 @@ function outputMainBanner(){
 
 function outputMainPanel()
 {
-    echo '<!--Making Main panel-->';
-    echo '<div class="container">';
-    echo '<div class="row">';
-    echo '<div class="col-lg-9">';
-    echo '<div class="panel panel-default">';
-    echo '<div class="panel-body">';
-
 }
 // add main content here
 
-
-
-function outputSideBarPart1(){
-    echo '</div>'; //End panel body div
-    echo '</div>';
-    echo '</div>';
-    echo '<!--Side bar div-->';
-    echo '<div class="col-lg-3">';
-    echo '<div class="list-group">';
-}
-
-function outputSideBarPart2(){
-    echo '</div>';
-    echo '</div>';
-    echo '<!--End side bar div-->';
-    echo '</div>';
-    echo '</div>';
-    echo '<!--End of Main panel-->';
-
-}
 
 function outputCart(){
     if(isset($_GET['_id'])){
@@ -187,25 +184,66 @@ function outputPayButton(){
     }
 }
 
+function outputInformation(){
+    echo '<!--information-starts-->';
+    echo '<div style="margin-bottom: 80px" class="container">';
+    echo '<div class="row">';
+    echo '<div class="col-md-3">';
+    echo '<h3>Follow Us</h3>';
+    echo '<ul>';
+    echo '<li><a href="#"><span class="fb"></span><h6>Facebook</h6></a></li>';
+    echo '<li><a href="#"><span class="twit"></span><h6>Twitter</h6></a></li>';
+    echo '<li><a href="#"><span class="google"></span><h6>Google+</h6></a></li>';
+    echo '</ul>';
+    echo '</div>';
+    echo '<div class="col-md-3">';
+    echo '<h3>Information</h3>';
+    echo '<ul>';
+    echo '<li><a href="#"><p>Specials</p></a></li>';
+    echo '<li><a href="#"><p>New Products</p></a></li>';
+    echo '<li><a href="#"><p>Our Stores</p></a></li>';
+    echo '<li><a href="contact.html"><p>Contact Us</p></a></li>';
+    echo '<li><a href="#"><p>Top Sellers</p></a></li>';
+    echo '</ul>';
+    echo '</div>';
+    echo '<div class="col-md-3">';
+    echo '<h3>My Account</h3>';
+    echo '<ul>';
+    echo '<li><a href="login.php"><p>My Account</p></a></li>';
+    echo '<li><a href="purchase-history.php"><p>My Credit slips</p></a></li>';
+    echo '<li><a href="#"><p>My Merchandise returns</p></a></li>';
+    echo '<li><a href="#"><p>My Personal info</p></a></li>';
+    echo '<li><a href="#"><p>My Addresses</p></a></li>';
+    echo '</ul>';
+    echo '</div>';
+    echo '<div class="col-md-3">';
+    echo '<h3>Store Information</h3>';
+    echo '<p>Amazing Shop,';
+    echo '<span>Lorem ipsum dolor,</span>';
+    echo 'Middlesex university Hendon</p>';
+    echo '<h5>+44 123 4567</h5>';
+    echo '<p><a href="mailto:example@email.com">contact@example.com</a></p>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '<!--End information-->';
+}
 
 
-function outputFooterPart1(){
+
+function outputFooter(){
     echo '<!--Footer div-->';
     echo '<div class="navbar navbar-inverse navbar-fixed-bottom">';
     echo '<div class="container">';
     echo '<div class="container">';
     echo '<p class="navbar-text pull-left">Site Built By Povilas Urbonas 2017</p>';
-    echo '<a href="#" class="navbar-btn btn-danger btn pull-right">Subscribe on Youtube</a>';
+    echo '<a href="http://www.trello.com" class="navbar-btn btn-danger btn pull-right">Trello Link</a>';
     echo '</div><!--End of div class="container"-->';
     echo '</div><!--End of div class="navbar" , End of Footer-->';
-}
-
-function outputFooterPart2(){
-       echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>';
+    echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>';
     echo '<script src="js/bootstrap.min.js"></script>';
     echo '</body>';
-    echo '</html>';
- 
+    echo '</html>'; 
 }
 
 ?>

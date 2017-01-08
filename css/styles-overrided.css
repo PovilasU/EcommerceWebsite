@@ -46,6 +46,7 @@
 .top-header-left{
     width:50%;
     float:left;
+
 }
 
 
@@ -53,14 +54,17 @@
     display: inline-block;
     vertical-align: middle;
     color: #fff;
+
 }
 
 .cart box_1 a:hover{
     text-decoration:none;
+
 }
 
 .box_1 a img {
     margin: 3px 0 0 10px;
+
 }
 /*----*/
 .box {

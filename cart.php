@@ -4,22 +4,20 @@
 include('common.php');
 //Output header and navigation
 outputHeader("E-Commerce Website");
-outputBannerNavigation("Home");
-outputMainBanner();
+outputTopHeader();
+outputBannerNavigation("about");
+
+
 ?>
-<?php
-outputMainPanel();
-?>
+
 <!--Maint content here-->
 
 <div class="panel-body">
     <div class="page-header">
-        <h3>Post something! <small>Posted on  date</small> </h3>
+        <h3>Shopping Cart <small></small> </h3>
     </div>
     <!--        <img  class="featuredImg" src="img/idear.jpg"  width="100%" alt="">-->
-    <p>Paragraph</p>
-    <h4>A heading</h4>
-    <p>paragraph</p>
+
     <?php
     //session_start();
     require 'connect.php';
@@ -181,36 +179,16 @@ outputMainPanel();
 
 </div>
 <!--End Maint content -->
-<?php
-outputSideBarPart1();
-?>
+
+
 <!--Side Bar content here-->
-<a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading" >Lorem ipsum</h4>
-    <p class="list-group-item-text"> some text </p>
-
-</a>
-<a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading" >Lorem ipsum</h4>
-    <p class="list-group-item-text"> some text </p>
-
-</a>
 
 
 
 <!--End side bar content -->
-<?php
-outputSideBarPart2();
-
-?>
-<?php
-//Output the footer
-outputFooterPart1();
-?>
 
 <?php
-outputFooterPart2();
+//output information bar
+outputInformation();
+outputFooter();
 ?>
-
-
-
