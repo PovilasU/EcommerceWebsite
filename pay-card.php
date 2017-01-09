@@ -4,8 +4,10 @@
 include('common.php');
 //Output header and navigation
 outputHeader("E-Commerce Website");
-outputBannerNavigation("Home");
+outputTopHeader();
+outputBannerNavigation("Pay");
 ?>
+
 <?php
 outputMainPanel();
 ?>
@@ -13,7 +15,7 @@ outputMainPanel();
 
 <div class="panel-body">
     <div class="page-header">
-        <h3>Home Page <small></small> </h3>
+        <h3>Payment Page<small></small> </h3>
     </div>
     <!--        <img  class="featuredImg" src="img/idear.jpg"  width="100%" alt="">-->
     <!--        <p>Paragraph</p>-->
@@ -344,34 +346,14 @@ outputMainPanel();
 
 </div>
 <!--End Maint content -->
-<?php
-outputSideBarPart1();
-?>
-<!--Side Bar content here-->
-<a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading" >Lorem ipsum</h4>
-    <p class="list-group-item-text"> some text </p>
-
-</a>
-<a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading" >Lorem ipsum</h4>
-    <p class="list-group-item-text"> some text </p>
-
-</a>
 
 
 
-<!--End side bar content -->
-<?php
-outputSideBarPart2();
 
-?>
-<?php
-//Output the footer
-outputFooterPart1();
-?>
+
 
 <?php
-outputFooterPart2();
+//output information bar
+outputInformation();
+outputFooter();
 ?>
-

@@ -13,14 +13,15 @@ function outputHeader($title){
     echo '<head>';
     echo '<meta name="viewport" content="width=device-width, initial-scale=1.0" >  ';
     echo '<title>' . $title . '</title>';
+    echo '<script src="js/searchbar.js"></script>';
     echo '<!-- Link to external style sheet -->';
     echo '<link  href="css/bootstrap.min.css" rel="stylesheet">';
     echo '<link  href="css/styles.css" rel="stylesheet">';
     echo '<link  href="css/styles-overrided.css" rel="stylesheet">';
     echo '</head>';
-    echo '<body>';
-
+    echo '<body onload="process()">';    
 }
+
 function outputTopHeader(){
     echo ' <!--top-header-->';
     echo '<div class="top-header">';
@@ -73,10 +74,13 @@ function outputBannerNavigation($pageName)
     echo '<li><a href="logout.php">Logout</a></li>';
     echo '<li><a href="about.php">About</a></li>';
     echo '<li><a href="templatePage.php">Template Page</a></li>';
+    echo '<li style="margin-top: 10px " ><input type="text"  placeholder="Search" id="userInput" /></li>';
+    echo '<li style="margin-top: 10px "><div id="underInput" > </div></li>';
     echo '</ul><!--End of class="nav navbar-nav navbar-right"-->';
     echo '</div><!--End of collapse navbar-collapse navHeaderCollapse-->';
     echo '</div><!--End of container-->';
     echo '</div><!--End of navbar-->';
+
 }
 
 function outputMainBanner(){  
@@ -219,8 +223,11 @@ function outputInformation(){
     echo '<div class="col-md-3">';
     echo '<h3>Store Information</h3>';
     echo '<p>Amazing Shop,';
-    echo '<span>Lorem ipsum dolor,</span>';
-    echo 'Middlesex university Hendon</p>';
+    echo '</br>';
+    echo '<span>Baker street 11,</span>';
+    echo '</br>';
+    echo '<span>Middlesex University Hendon</span>';
+    echo '</p>';
     echo '<h5>+44 123 4567</h5>';
     echo '<p><a href="mailto:example@email.com">contact@example.com</a></p>';
     echo '</div>';

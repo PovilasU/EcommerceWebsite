@@ -22,9 +22,6 @@ $cursor = $collection->find();
 
 
 
-
-
-
 <!--product-starts-->
 <div class="product">
     <div style="margin-top: 80px; margin-bottom: 80px" class="container">
