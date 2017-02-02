@@ -10,17 +10,12 @@ outputBannerNavigation("Home");
 <?php
 outputMainPanel();
 ?>
-    <!--Maint content here-->
+    <!--Main content here-->
 
     <div class="panel-body">
         <div class="page-header">
             <h3>Post something! <small>Posted on  date</small> </h3>
         </div>
-        <!--        <img  class="featuredImg" src="img/idear.jpg"  width="100%" alt="">-->
-<!--        <p>Paragraph</p>-->
-<!--        <h4>A heading</h4>-->
-<!--        <p>paragraph</p>-->
-
         <?php
         session_start();
         require 'connect.php';

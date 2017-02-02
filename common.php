@@ -88,7 +88,7 @@ function outputMainBanner(){
     echo '<div style="margin-top: 0px" class="container-fluid no-padding">';
     echo '<div class="row">';
     echo '<div class="col-md-12">';
-    echo ' <img src="images/bnr-1.jpg" alt="" class="img-responsive" width="100%"/>';
+    echo ' <img src="images/dvds/walt_disney_pictures_logo.jpg" alt="" class="img-responsive" width="100%"/>';
     echo '</div>';
     echo '</div>';
     echo '</div>';
