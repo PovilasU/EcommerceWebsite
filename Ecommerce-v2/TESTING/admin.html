@@ -1,0 +1,133 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0" >  <title>E-Commerce Website</title><script src="js/searchbar.js"></script><!-- Link to external style sheet --><link  href="css/bootstrap.min.css" rel="stylesheet"><link  href="css/styles.css" rel="stylesheet"><link  href="css/styles-overrided.css" rel="stylesheet"></head><body onload="process()"><div class="navbar navbar-default navbar-custom navbar-static-top  "><div  class="container"><a href="#" class="navbar-brand  ">E-Commerce Website</a><!--End of  <a> navbar-brand--><button class="navbar-toggle" data-toggle="collapse" data-target = ".navHeaderCollapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><!--End of button--><div class="collapse navbar-collapse navHeaderCollapse"><ul class="nav navbar-nav navbar-right"><li class=""><a href="index.php">Home</a></li><li><a href="cart.php">Cart</a></li><li><a href="logout.php">Logout</a></li><li><a href="about.php">About</a></li><li style="margin-top: 10px " ><input type="text"  placeholder="Search" id="userInput" /></li><li style="margin-top: 10px "><div id="underInput" > </div></li></ul><!--End of class="nav navbar-nav navbar-right"--></div><!--End of collapse navbar-collapse navHeaderCollapse--></div><!--End of container--></div><!--End of navbar-->    <!--Main content here-->
+
+    <div class="panel-body">
+        <div class="page-header">
+            <h3>Post something! <small>Posted on  date</small> </h3>
+        </div>
+        <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+Hello Admin , do whatever you like
+
+        <!--Items table-->
+        <table cellpadding="2" cellspacing="2" border="0">
+            <tr>
+                <!--        <th>Id</th>-->
+                <th>Name</th>
+                <th>Price £</th>
+                <th>Quantity</th>
+                <th>Description</th>
+                <th>Image</th>
+                <!--        <th>Description</th>-->
+                <!--        <th>Buy</th>-->
+            </tr>
+
+            
+                <tr>
+                    <!--            <td>--><!--</td>-->
+                    <td>cindarela</td>
+                    <td>12</td>
+                    <td>22</td>
+                    <td>Cindarella</td>
+                    <td>Cinderella.jpg</td>
+<!--                    <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td><a href="cart.php?_id=--><!--">Order Now</a> </td>-->
+                </tr>
+
+            
+                <tr>
+                    <!--            <td>--><!--</td>-->
+                    <td>asdad</td>
+                    <td>123</td>
+                    <td>22</td>
+                    <td>very good</td>
+                    <td>Cinderella.jpg</td>
+<!--                    <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td><a href="cart.php?_id=--><!--">Order Now</a> </td>-->
+                </tr>
+
+            
+                <tr>
+                    <!--            <td>--><!--</td>-->
+                    <td>aa</td>
+                    <td>123</td>
+                    <td>22</td>
+                    <td>22</td>
+                    <td>Cinderella.jpg</td>
+<!--                    <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td><a href="cart.php?_id=--><!--">Order Now</a> </td>-->
+                </tr>
+
+            
+                <tr>
+                    <!--            <td>--><!--</td>-->
+                    <td>999</td>
+                    <td>99</td>
+                    <td>999</td>
+                    <td>999</td>
+                    <td>Cinderella.jpg</td>
+<!--                    <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td><a href="cart.php?_id=--><!--">Order Now</a> </td>-->
+                </tr>
+
+            
+                <tr>
+                    <!--            <td>--><!--</td>-->
+                    <td>ooo</td>
+                    <td>1111</td>
+                    <td>444</td>
+                    <td>very good</td>
+                    <td>Cinderella.jpg</td>
+<!--                    <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td>--><!--</td>-->
+                    <!--            <td><a href="cart.php?_id=--><!--">Order Now</a> </td>-->
+                </tr>
+
+            
+        </table>
+
+        <br>
+        <br>
+
+        <!--Add item form-->
+        <form action="admin.php" method="POST">
+            ItemName:
+            <input type="text" id="itemName" name="itemName"  /></br></br>
+            Price £:
+            <input type="text" id="price" name="price"  /></br></br>
+            Quantity:
+            <input type="text" id="quantity" name="quantity"  /></br></br>
+            Description:
+            <input type="text" id="description" name="description"  /></br></br>
+            Image name:
+            <input type="text" id="image" name="image"  /></br></br>
+            <input  name="submit" id="submit" type="submit" value="Add Item" />
+            <input  name="modify" id="submit" type="submit" value="Modify Item" />
+        </form>
+
+    </div>
+    <!--End Maint content -->
+<br />
+<b>Fatal error</b>:  Call to undefined function outputSideBarPart1() in <b>C:\xampp\htdocs\EcommerceWebsite\admin.php</b> on line <b>249</b><br />

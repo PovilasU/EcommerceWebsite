@@ -1,0 +1,67 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0" >  <title>E-Commerce Website</title><script src="js/searchbar.js"></script><!-- Link to external style sheet --><link  href="css/bootstrap.min.css" rel="stylesheet"><link  href="css/styles.css" rel="stylesheet"><link  href="css/styles-overrided.css" rel="stylesheet"></head><body onload="process()"> <!--top-header--><div class="top-header"><div class="container"><div class="container"><div class="top-header-main"><div class="col-md-6 top-header-left"><div style="float: right" class="cart box_1"><a href="checkout.html"><div class="total"><span class="simpleCart_total"></span></div><span class="simpleCart_total"> </span></div><img src="images/cart-1.png" alt="" /></a><p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p></div><div style="float: right" class="cart box_1"><p style="color: white"><?php echo "Current User: ".$name; ?></p></div></div></div></div></div><!--End top-header--><div class="navbar navbar-default navbar-custom navbar-static-top  "><div  class="container"><a href="#" class="navbar-brand  ">E-Commerce Website</a><!--End of  <a> navbar-brand--><button class="navbar-toggle" data-toggle="collapse" data-target = ".navHeaderCollapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><!--End of button--><div class="collapse navbar-collapse navHeaderCollapse"><ul class="nav navbar-nav navbar-right"><li class=""><a href="index.php">Home</a></li><li><a href="cart.php">Cart</a></li><li><a href="logout.php">Logout</a></li><li><a href="about.php">About</a></li><li style="margin-top: 10px " ><input type="text"  placeholder="Search" id="userInput" /></li><li style="margin-top: 10px "><div id="underInput" > </div></li></ul><!--End of class="nav navbar-nav navbar-right"--></div><!--End of collapse navbar-collapse navHeaderCollapse--></div><!--End of container--></div><!--End of navbar-->
+<!--Maint content here-->
+
+<div class="panel-body">
+    <div class="page-header">
+        <h3>Shopping Cart <small></small> </h3>
+    </div>
+    <!--        <img  class="featuredImg" src="img/idear.jpg"  width="100%" alt="">-->
+
+    <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+    <table cellspacing="2" cellpadding="2" border="1">
+        <tr>
+            <th>Option</th>
+            <th>_Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+        </tr>
+        <br />
+<b>Notice</b>:  Undefined index: cart in <b>C:\xampp\htdocs\EcommerceWebsite\cart.php</b> on line <b>89</b><br />
+
+
+
+        <tr>
+            <td colspan="5" align="right">Sum</td>
+            <td align="left"> 0 </td>
+                    </tr>
+    </table>
+
+    <!--Pay form-->
+    <form action="pay-card.php" method="post">
+        <td><input type="submit" name="bttPay" value="Pay"></td>
+    </form>
+
+    <br>
+
+    <br>
+    <a href="index.php">Continue Shopping</a>
+    
+
+</div>
+<!--End Maint content -->
+
+
+<!--Side Bar content here-->
+
+
+
+<!--End side bar content -->
+
+<!--information-starts--><div style="margin-bottom: 80px" class="container"><div class="row"><div class="col-md-3"><h3>Follow Us</h3><ul><li><a href="#"><span class="fb"></span><h6>Facebook</h6></a></li><li><a href="#"><span class="twit"></span><h6>Twitter</h6></a></li><li><a href="#"><span class="google"></span><h6>Google+</h6></a></li></ul></div><div class="col-md-3"><h3>Information</h3><ul><li><a href="#"><p>Specials</p></a></li><li><a href="#"><p>New Products</p></a></li><li><a href="#"><p>Our Stores</p></a></li><li><a href="contact.html"><p>Contact Us</p></a></li><li><a href="#"><p>Top Sellers</p></a></li></ul></div><div class="col-md-3"><h3>My Account</h3><ul><li><a href="login.php"><p>My Account</p></a></li><li><a href="purchase-history.php"><p>My Credit slips</p></a></li><li><a href="#"><p>My Merchandise returns</p></a></li><li><a href="#"><p>My Personal info</p></a></li><li><a href="#"><p>My Addresses</p></a></li></ul></div><div class="col-md-3"><h3>Store Information</h3><p>Amazing Shop,</br><span>Baker street 11,</span></br><span>Middlesex University Hendon</span></p><h5>+44 123 4567</h5><p><a href="mailto:example@email.com">contact@example.com</a></p></div></div></div><!--End information--><!--Footer div--><div class="navbar navbar-inverse navbar-fixed-bottom"><div class="container"><div class="container"><p class="navbar-text pull-left">Site Built By Povilas Urbonas 2017</p><a href="http://www.trello.com" class="navbar-btn btn-danger btn pull-right">Trello Link</a></div><!--End of div class="container"--></div><!--End of div class="navbar" , End of Footer--><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="js/bootstrap.min.js"></script></body></html>
