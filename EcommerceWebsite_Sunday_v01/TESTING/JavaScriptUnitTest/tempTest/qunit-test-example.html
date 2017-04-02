@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple QUnit example</title>
+
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/qunit/qunit-2.1.1.css">
+<script src="https://code.jquery.com/qunit/qunit-2.1.1.js"></script>
+</head>
+<body>
+<!-- Results of testing displayed heres -->
+		<div id="qunit"></div>
+		<div id="qunit-fixture"></div>
+	<script>
+	//This is the function we want to te4st
+	//It should returnt the product of the two arguments
+	function multiply(num1, num2){
+		return num1+num2;
+	}
+
+	//This is the first test
+	QUnit.test("Test multiply 2*2", function(assert){
+		assert.strictEqual(multiply(2,2), 4);
+	});
+
+	//This is the second test
+	QUnit.test("Test multiply 2*3", function(assert){
+		assert.strictEqual(multiply(2,3), 6);
+	})
+
+	</script>
+
+</body>
+</html>

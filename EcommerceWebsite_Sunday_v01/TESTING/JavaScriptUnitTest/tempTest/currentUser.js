@@ -1,0 +1,1 @@
+var CurrentUser = "Current User";

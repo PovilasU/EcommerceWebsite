@@ -1,0 +1,10 @@
+[  
+{   
+    "balance": "$3,960.64",
+    "username": "test",  
+    "password": "123",  
+    "email": "test@gmail.com",
+    "phone": "+44 1234 5678",
+    "address": "DD3 RR3"
+  }
+]
